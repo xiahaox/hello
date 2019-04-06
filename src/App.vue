@@ -3,7 +3,7 @@
     <!-- 头部 -->
     <mt-header fixed title="固定在顶部"></mt-header>
     <!-- 主体部分 -->
-
+    <div></div>
     <!-- 底部 -->
     <nav class="mui-bar mui-bar-tab">
       <a class="mui-tab-item" href="#tabbar">
