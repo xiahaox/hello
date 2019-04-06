@@ -9,6 +9,7 @@ import { Header } from 'mint-ui';
 Vue.component(Header.name, Header);
 //导入mui
 import './lib/mui/css/mui.css'
+import './lib/mui/css/icons-extra.css'
 
 import App from './App.vue'
 const vm = new Vue({
