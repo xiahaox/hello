@@ -4,7 +4,9 @@
     <mt-header fixed title="固定在顶部"></mt-header>
 
     <!-- 主体部分 -->
-    <router-view></router-view>
+    <transition>
+      <router-view></router-view>
+    </transition>
 
     <!-- 底部 -->
     <nav class="mui-bar mui-bar-tab">
@@ -37,5 +39,20 @@ export default {};
 <style lang="scss" scoped>
 .app-container {
   padding-top: 40px;
+  overflow-x: hidden;
+  padding-bottom: 50px;
+}
+.v-enter {
+  opacity: 0;
+  transform: translateX(100%);
+}
+.v-enter-active,
+.v-leave-active {
+  transition: all 1s ease;
+}
+.v-leave-to {
+  opacity: 0;
+  transform: translateX(-100%);
+  position: absolute;
 }
 </style>

@@ -14,10 +14,10 @@ Vue.component(Header.name, Header);
 import "./lib/mui/css/mui.css";
 import "./lib/mui/css/icons-extra.css";
 //导入轮播图
-import { Swipe, SwipeItem } from 'mint-ui';
+import { Swipe, SwipeItem, Button } from 'mint-ui';
 Vue.component(Swipe.name, Swipe);
 Vue.component(SwipeItem.name, SwipeItem);
-
+Vue.component(Button.name, Button);
 //导入路由
 import VueRouter from 'vue-router'
 //安装路由
@@ -25,11 +25,19 @@ Vue.use(VueRouter)
 import router from './router.js'
 
 //vue-resource --发送ajax
-import VueResource from 'vue-resource' 
+import VueResource from 'vue-resource'
 Vue.use(VueResource)
+//配置一个api请求的url地址
+Vue.http.options.root = 'http://192.168.18.57:3005/'
 
+//全局定义过滤器 格式化时间
+import moment from 'moment'
+Vue.filter('dateFormat', function (dateStr, pattern = 'YYYY-MM-DD HH:mm:ss') {
+    return moment(dateStr).format(pattern)
+})
 
 import App from './App.vue'
+// import moment = require('_moment@2.24.0@moment');
 const vm = new Vue({
     el: '#app',
     render: function (createElement) {
