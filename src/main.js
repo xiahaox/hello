@@ -1,23 +1,23 @@
 
 import Vue from 'vue'
 
-// import MintUI from 'mint-ui'
-// import 'mint-ui/lib/style.css'
-// Vue.use(MintUI)
+import MintUI from 'mint-ui'
+import 'mint-ui/lib/style.css'
+Vue.use(MintUI)
 
 
 
 //导入mint-ui
-import { Header } from 'mint-ui';
-Vue.component(Header.name, Header);
+// import { Header } from 'mint-ui';
+// Vue.component(Header.name, Header);
 //导入mui
 import "./lib/mui/css/mui.css";
 import "./lib/mui/css/icons-extra.css";
 //导入轮播图
-import { Swipe, SwipeItem, Button } from 'mint-ui';
-Vue.component(Swipe.name, Swipe);
-Vue.component(SwipeItem.name, SwipeItem);
-Vue.component(Button.name, Button);
+// import { Swipe, SwipeItem, Button } from 'mint-ui';
+// Vue.component(Swipe.name, Swipe);
+// Vue.component(SwipeItem.name, SwipeItem);
+// Vue.component(Button.name, Button);
 //导入路由
 import VueRouter from 'vue-router'
 //安装路由
@@ -28,7 +28,11 @@ import router from './router.js'
 import VueResource from 'vue-resource'
 Vue.use(VueResource)
 //配置一个api请求的url地址
-Vue.http.options.root = 'http://192.168.18.57:3005/'
+Vue.http.options.root = 'http://www.liulongbin.top:3005'
+Vue.http.options.emulateJSON = true
+// 缩略图
+import VuePreview from 'vue-preview'
+Vue.use(VuePreview)
 
 //全局定义过滤器 格式化时间
 import moment from 'moment'

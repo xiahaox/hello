@@ -6,7 +6,7 @@
       <span>点击：{{newsinfo.click}}次</span>
     </p>
     <div class="content" v-html="newsinfo.content"></div>
-    <component-box></component-box>
+    <component-box :id="id"></component-box>
   </div>
 </template>
 <script>
@@ -20,7 +20,6 @@ export default {
   methods: {
     getData() {
       this.$http.get("api/getnew/" + this.id).then(res => {
-        console.log(res);
         this.newsinfo = res.body.message[0];
       });
     }
