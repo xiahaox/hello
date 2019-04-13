@@ -78,3 +78,20 @@ export default {
 
 
 </style>
+<style lang="scss" >
+.photoinfo-container{
+ .my-gallery{
+    overflow: hidden;
+    figure{
+     float: left;
+     width: 25%;
+    margin: 0px;
+    padding: 1px;
+      img{
+        width: 100%;
+      }
+    }
+  }
+}
+ 
+</style>
