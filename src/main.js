@@ -12,6 +12,9 @@ Vue.use(MintUI)
 import "./lib/mui/css/mui.css";
 import "./lib/mui/css/icons-extra.css";
 
+import echarts from 'echarts'
+Vue.prototype.$echarts = echarts
+
 //导入路由
 import VueRouter from 'vue-router'
 //安装路由
